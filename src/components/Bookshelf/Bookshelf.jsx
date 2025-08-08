@@ -28,7 +28,23 @@ return (
 <div className="bookshelfDiv">
   <div className="formDiv">
     <h3>Add a Book</h3>
-    {/* Form will go here */}
+    <form onSubmit={handleSubmit}>
+        <input 
+            id="title"
+            name="title"
+            type="text"
+            value={newBook.title}
+            onChange={handleInputChange}
+        />
+        <input
+            id="author"
+            name="author"
+            type="text"
+            value={newBook.author}
+            onChange={handleSubmit}
+        />
+        <button type="submit">Submit</button>
+    </form>
   </div>
   <div className="bookCardsDiv">{/* Book cards will display here */}</div>
 </div>
